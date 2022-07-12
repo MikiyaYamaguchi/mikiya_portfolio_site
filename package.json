@@ -1,0 +1,33 @@
+{
+  "name": "mikiya-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "start": "nuxt-ts start",
+    "generate": "nuxt-ts generate"
+  },
+  "dependencies": {
+    "@nuxt/typescript-runtime": "^2.0.1",
+    "@nuxtjs/auth": "^4.9.1",
+    "@nuxtjs/device": "^2.1.0",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "axios": "^0.27.2",
+    "core-js": "^3.8.3",
+    "element-ui": "^2.15.0",
+    "moment": "^2.29.3",
+    "node-sass": "^5.0.0",
+    "nuxt": "^2.14.12",
+    "nuxt-webfontloader": "^1.1.0",
+    "sass-loader": "10.1.1",
+    "vue-router": "^3.5.1"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.14.12",
+    "@nuxt/typescript-build": "^2.0.4",
+    "@nuxtjs/moment": "^1.6.1",
+    "chart.js": "2",
+    "vue-chartjs": "2"
+  }
+}

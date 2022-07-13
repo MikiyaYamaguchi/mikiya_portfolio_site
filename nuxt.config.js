@@ -1,16 +1,17 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  target: "static",
   head: {
     title: "mikiya-portfolio",
     htmlAttrs: {
-      lang: "en"
+      lang: "en",
     },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" }
+      { hid: "description", name: "description", content: "" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -27,10 +28,10 @@ export default {
     // https://go.nuxtjs.dev/typescript
     "@nuxt/typescript-build",
     "@nuxtjs/device",
-    "@nuxtjs/moment"
+    "@nuxtjs/moment",
   ],
   moment: {
-    locales: ["ja"]
+    locales: ["ja"],
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -38,18 +39,18 @@ export default {
     "nuxt-webfontloader",
     "@nuxtjs/axios",
     "@nuxtjs/auth",
-    "@nuxtjs/sitemap"
+    "@nuxtjs/sitemap",
   ],
 
   webfontloader: {
     google: {
-      families: ["Noto+Sans+JP:100,300,400,500,700,900"]
-    }
+      families: ["Noto+Sans+JP:100,300,400,500,700,900"],
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: [/^element-ui/]
+    transpile: [/^element-ui/],
   },
 
   sitemap: {
@@ -58,21 +59,21 @@ export default {
     routes: async () => {
       const axios = require("axios");
       const response = await axios.get("http://localhost:5000");
-      return response.data.data.map(item => ({
+      return response.data.data.map((item) => ({
         url: `blog_detail?id=${item.id}`,
-        lastmod: item.createdAt
+        lastmod: item.createdAt,
       }));
-    }
+    },
   },
 
   axios: {
-    baseURL: "http://localhost:5000/"
+    baseURL: "http://localhost:5000/",
   },
 
   auth: {
     redirect: {
       home: "/admin",
-      logout: "/login"
+      logout: "/login",
     },
     strategies: {
       local: {
@@ -80,16 +81,16 @@ export default {
           login: {
             url: "/users/login",
             method: "post",
-            propertyName: "token"
+            propertyName: "token",
           },
           logout: false,
           user: {
             url: "/users/user",
             method: "get",
-            propertyName: "user"
-          }
-        }
-      }
-    }
-  }
+            propertyName: "user",
+          },
+        },
+      },
+    },
+  },
 };

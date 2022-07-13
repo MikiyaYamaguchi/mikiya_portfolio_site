@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{396:function(n,t,e){"use strict";e.r(t);var o=e(405),r=o.mixins.reactiveProp,d={extends:o.Radar,mixins:[r],props:["options"],mounted:function(){this.renderChart(this.chartData,this.options)}},c=e(11),component=Object(c.a)(d,undefined,undefined,!1,null,null,null);t.default=component.exports}}]);

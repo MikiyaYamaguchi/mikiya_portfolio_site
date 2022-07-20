@@ -53,11 +53,13 @@ export default {
   },
 
   sitemap: {
-    hostname: "http://localhost:3000",
+    hostname: "https://mikiya-yamaguchi-1503.netlify.app/",
     exclude: ["/admin", "/admin_detail", "/admin_edit", "/admin_new", "/login"],
     routes: async () => {
       const axios = require("axios");
-      const response = await axios.get("http://localhost:5000");
+      const response = await axios.get(
+        "https://mikiya-portfolio-blog-api.herokuapp.com"
+      );
       return response.data.data.map((item) => ({
         url: `blog_detail?id=${item.id}`,
         lastmod: item.createdAt,
@@ -66,7 +68,7 @@ export default {
   },
 
   axios: {
-    baseURL: "http://localhost:5000/",
+    baseURL: "https://mikiya-portfolio-blog-api.herokuapp.com/",
   },
 
   auth: {

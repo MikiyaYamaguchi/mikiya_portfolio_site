@@ -125,6 +125,15 @@ export default Vue.extend({
       }
     }
   }
+  @media screen and (min-width: 768px) {
+    .row {
+      .col {
+        &:last-child {
+          min-height: 330px;
+        }
+      }
+    }
+  }
   @media screen and (max-width: 767px) {
     .row {
       .col {

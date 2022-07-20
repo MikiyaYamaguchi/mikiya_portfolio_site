@@ -130,6 +130,14 @@ export default Vue.extend({
       .col {
         &:last-child {
           min-height: 330px;
+          position: relative;
+          padding-bottom: 30px;
+          .more {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+          }
         }
       }
     }

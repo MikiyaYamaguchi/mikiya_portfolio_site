@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const myApi = axios.create({
-  baseURL: "http://localhost:5000",
-  responseType: "json"
+  baseURL: "https://mikiya-portfolio-blog-api.herokuapp.com",
+  responseType: "json",
 });
 
 export default {
@@ -34,7 +34,7 @@ export default {
       await myApi.put(`/${id}`, {
         title: data.title,
         content: data.content,
-        thumbnail: data.thumbnail
+        thumbnail: data.thumbnail,
       });
     } catch (error) {
       console.error(error);
@@ -53,8 +53,8 @@ export default {
       formData.append("file", imageFile);
       const config = {
         headers: {
-          "content-type": "multipart/form-data"
-        }
+          "content-type": "multipart/form-data",
+        },
       };
       let res = await myApi.post("/image", formData, config);
       if (res.data.status === "error") {
@@ -66,5 +66,5 @@ export default {
     } catch (error) {
       console.error(error);
     }
-  }
+  },
 };

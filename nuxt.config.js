@@ -69,6 +69,11 @@ export default {
 
   axios: {
     baseURL: "https://mikiya-portfolio-blog-api.herokuapp.com/",
+    proxy: true,
+  },
+
+  proxy: {
+    "/": "https://mikiya-portfolio-blog-api.herokuapp.com/",
   },
 
   auth: {

@@ -78,6 +78,7 @@ export default Vue.extend({
 
     },
     onSuccess (res, file) {
+      console.log(file.raw.name);
       this.fileList = file.raw;
       this.form.thumbnail = `https://mikiya-portfolio-blog-api.herokuapp.com/public/images/${file.raw.name}`;
     },

@@ -65,13 +65,13 @@ export default Vue.extend({
       this.$router.push({ path });
     },
     postData () {
-      // this.uploadImgData();
+      this.uploadImgData();
       this.postBlogData();
       this.changePage(Path.ADMIN);
     },
     onFileChange (e) {
       this.fileList = e.target.files || e.dataTransfer.files;
-      this.form.thumbnail = e.target.files[0].name
+      this.form.thumbnail = `https://mikiya-portfolio-blog-api.herokuapp.com/public/images/${e.target.files[0].name}`;
     },
     async uploadImgData () {
       await blogApi.uploadImgData(

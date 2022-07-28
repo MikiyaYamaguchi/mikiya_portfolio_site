@@ -50,7 +50,7 @@ export default {
   async uploadImgData(imageFile: any) {
     try {
       const formData = new FormData();
-      formData.append("file", imageFile);
+      formData.append("file", imageFile[0]);
       const config = {
         headers: {
           "content-type": "multipart/form-data",

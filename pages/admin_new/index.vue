@@ -65,7 +65,7 @@ export default Vue.extend({
       this.$router.push({ path });
     },
     postData () {
-      this.uploadImgData();
+      // this.uploadImgData();
       this.postBlogData();
       this.changePage(Path.ADMIN);
     },

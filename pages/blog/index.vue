@@ -82,9 +82,6 @@ export default Vue.extend({
       color: #808080;
     }
     .col {
-      &:first-child {
-        min-height: 400px;
-      }
       .img_content {
         height: 100%;
         figure {
@@ -132,7 +129,7 @@ export default Vue.extend({
     .row {
       .col {
         &:last-child {
-          min-height: 330px;
+          min-height: 400px;
           position: relative;
           padding-bottom: 30px;
           .more {

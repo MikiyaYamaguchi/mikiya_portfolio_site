@@ -60,7 +60,7 @@ export default {
       if (res.data.status === "error") {
         alert(res.data.error);
       } else {
-        alert("登録完了");
+        alert("登録完了！");
       }
       console.log(res);
     } catch (error) {

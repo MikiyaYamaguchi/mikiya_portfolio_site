@@ -12,7 +12,8 @@
         <el-input type="textarea" :rows="30" v-model="form.content"></el-input>
       </el-form-item>
       <el-form-item label="サムネイル画像">
-        <el-upload
+        <input type="file" id="file" v-on:change="onFileChange" />
+        <!-- <el-upload
           class="upload-demo"
           drag
           action="#"
@@ -27,7 +28,7 @@
             <em>click to upload</em>
           </div>
           <div class="el-upload__tip" slot="tip">jpg/png files with a size less than 500kb</div>
-        </el-upload>
+        </el-upload>-->
       </el-form-item>
       <el-form-item>
         <el-button @click="postData()" type="primary">投稿</el-button>
@@ -68,35 +69,39 @@ export default Vue.extend({
       this.postBlogData();
       this.changePage(Path.ADMIN);
     },
+    onFileChange (e) {
+      this.fileList = e.target.files || e.dataTransfer.files;
+      this.form.thumbnail = e.target.files[0].name
+    },
     async uploadImgData () {
       await blogApi.uploadImgData(
         this.fileList
       );
     },
-    onSuccess (res, file) {
-      console.log(file.raw.name);
-      this.fileList = file.raw;
-      this.form.thumbnail = `https://mikiya-portfolio-blog-api.herokuapp.com/public/images/${file.raw.name}`;
-    },
-    handleBefore (file) {
-      const fileType =
-        file.type === "image/jpeg" ||
-        file.type === "image/jpg" ||
-        file.type === "image/png";
-      const isLt100KB = file.size / 1024 < 500;
+    // onSuccess (res, file) {
+    //   console.log(file.raw.name);
+    //   this.fileList = file.raw;
+    //   this.form.thumbnail = `https://mikiya-portfolio-blog-api.herokuapp.com/public/images/${file.raw.name}`;
+    // },
+    // handleBefore (file) {
+    //   const fileType =
+    //     file.type === "image/jpeg" ||
+    //     file.type === "image/jpg" ||
+    //     file.type === "image/png";
+    //   const isLt100KB = file.size / 1024 < 500;
 
-      if (!fileType) {
-        this.$message.error(
-          "アイコンは拡張子が jpeg/jpg/png でないと登録できません。"
-        );
-      }
-      if (!isLt100KB) {
-        this.$message.error(
-          "アイコンはサイズが 500KB 以内でないと登録できません。"
-        );
-      }
-      return fileType && isLt100KB;
-    }
+    //   if (!fileType) {
+    //     this.$message.error(
+    //       "アイコンは拡張子が jpeg/jpg/png でないと登録できません。"
+    //     );
+    //   }
+    //   if (!isLt100KB) {
+    //     this.$message.error(
+    //       "アイコンはサイズが 500KB 以内でないと登録できません。"
+    //     );
+    //   }
+    //   return fileType && isLt100KB;
+    // }
   }
 });
 </script>

@@ -20,7 +20,6 @@
           :before-upload="handleBefore"
           multiple
           :limit="1"
-          http-request="uploadHttpRequest"
         >
           <i class="el-icon-upload"></i>
           <div class="el-upload__text">
@@ -73,9 +72,6 @@ export default Vue.extend({
       await blogApi.uploadImgData(
         this.fileList
       );
-    },
-    uploadHttpRequest (data) {
-
     },
     onSuccess (res, file) {
       console.log(file.raw.name);

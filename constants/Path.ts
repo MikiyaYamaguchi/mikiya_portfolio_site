@@ -5,6 +5,7 @@ export enum Path {
   BLOG = "/blog",
   BLOG_DETAIL = "/blog_detail",
   CONTACT = "/contact",
+  THANKS = "/thanks",
   ADMIN = "/admin",
   ADMIN_DETAIL = "/admin_detail",
   ADMIN_NEW = "/admin_new",

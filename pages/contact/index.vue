@@ -19,7 +19,13 @@
           <p>私に少しでも興味を持っていただけたのならば、是非下記フォームでお問い合わせください。何でも大歓迎です。</p>
         </div>
         <client-only>
-          <form action="/" class="contact_form" name="contact" method="POST" data-netlify="true">
+          <form
+            action="/thanks/"
+            class="contact_form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+          >
             <input type="hidden" name="form-name" value="contact" />
             <div class="contact_item">
               <label for="name">お名前</label>

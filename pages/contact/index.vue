@@ -20,7 +20,7 @@
         </div>
         <client-only>
           <form action="/" class="contact_form" name="contact" method="POST" data-netlify="true">
-            <input type="hidden" name="form-name" value="NAME_OF_YOUR_FORM" />
+            <input type="hidden" name="form-name" value="contact" />
             <div class="contact_item">
               <label for="name">お名前</label>
               <input type="text" id="name" name="name" v-model="name" autocomplete="name" />

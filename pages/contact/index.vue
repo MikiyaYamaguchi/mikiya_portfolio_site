@@ -18,24 +18,26 @@
         <div class="row">
           <p>私に少しでも興味を持っていただけたのならば、是非下記フォームでお問い合わせください。何でも大歓迎です。</p>
         </div>
-        <form class="contact_form" name="contact" method="POST" netlify>
-          <input type="hidden" name="form-name" :value="contact" />
-          <div class="contact_item">
-            <label for="name">お名前</label>
-            <input type="text" id="name" name="name" v-model="name" autocomplete="name" />
-          </div>
-          <div class="contact_item">
-            <label for="email">メールアドレス</label>
-            <input type="email" id="email" name="email" v-model="email" autocomplete="email" />
-          </div>
-          <div class="contact_item">
-            <label for="message">お問い合わせ内容</label>
-            <textarea id="message" rows="12" name="message" v-model="message"></textarea>
-          </div>
-          <div class="contact_submit">
-            <button type="submit">送信</button>
-          </div>
-        </form>
+        <client-only>
+          <form class="contact_form" name="contact" method="POST" netlify>
+            <input type="hidden" name="form-name" :value="contact" />
+            <div class="contact_item">
+              <label for="name">お名前</label>
+              <input type="text" id="name" name="name" v-model="name" autocomplete="name" />
+            </div>
+            <div class="contact_item">
+              <label for="email">メールアドレス</label>
+              <input type="email" id="email" name="email" v-model="email" autocomplete="email" />
+            </div>
+            <div class="contact_item">
+              <label for="message">お問い合わせ内容</label>
+              <textarea id="message" rows="12" name="message" v-model="message"></textarea>
+            </div>
+            <div class="contact_submit">
+              <button type="submit">送信</button>
+            </div>
+          </form>
+        </client-only>
       </scrollFadeIn>
     </section>
   </div>

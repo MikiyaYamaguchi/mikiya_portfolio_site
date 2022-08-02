@@ -19,6 +19,7 @@
 }
 
 main {
+  min-height: calc(100vh - 120px);
   .container {
     padding: 4% 0 0 5%;
     max-width: 1400px;

@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <p>お問い合わせありがとうございました。</p>
-    <p @click="changePage(Path.HOME)">トップへ戻る</p>
-  </div>
+  <section>
+    <div class="container">
+      <p>お問い合わせありがとうございました。</p>
+      <p @click="changePage(Path.HOME)">トップへ戻る</p>
+    </div>
+  </section>
 </template>
 
 <script>

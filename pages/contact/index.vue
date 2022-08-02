@@ -20,7 +20,7 @@
         </div>
         <client-only>
           <form
-            action="/thanks/"
+            action="/thanks"
             class="contact_form"
             name="contact"
             method="POST"

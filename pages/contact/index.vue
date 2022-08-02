@@ -38,6 +38,10 @@
             <label for="message">お問い合わせ内容</label>
             <textarea id="message" rows="12" name="message" v-model="message"></textarea>
           </div>
+          <div class="contact_item" v-show="false">
+            <label for="message">スパムでない場合は空欄</label>
+            <input type="text" name="bot-field" v-model="botField" />
+          </div>
           <div class="contact_submit">
             <button type="submit">送信</button>
           </div>

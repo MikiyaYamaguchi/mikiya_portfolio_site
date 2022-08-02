@@ -20,10 +20,10 @@
         </div>
         <client-only>
           <form
-            action="/thanks"
             class="contact_form"
             name="contact"
             method="POST"
+            action="/thanks"
             data-netlify="true"
           >
             <input type="hidden" name="form-name" value="contact" />

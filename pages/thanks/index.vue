@@ -10,6 +10,7 @@
 <script>
 import Vue from 'vue';
 import { Path } from "~/constants";
+import "@/assets/scss/global.scss";
 export default Vue.extend({
   data () {
     return {
@@ -25,4 +26,9 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+p {
+  &:first-child {
+    margin-bottom: 5%;
+  }
+}
 </style>

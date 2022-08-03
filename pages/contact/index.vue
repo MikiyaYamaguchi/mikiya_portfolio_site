@@ -28,15 +28,22 @@
           <input type="hidden" name="form-name" value="contact" />
           <div class="contact_item">
             <label for="name">お名前</label>
-            <input type="text" id="name" name="name" v-model="name" autocomplete="name" />
+            <input type="text" id="name" name="name" v-model="name" autocomplete="name" required />
           </div>
           <div class="contact_item">
             <label for="email">メールアドレス</label>
-            <input type="email" id="email" name="email" v-model="email" autocomplete="email" />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              v-model="email"
+              autocomplete="email"
+              required
+            />
           </div>
           <div class="contact_item">
             <label for="message">お問い合わせ内容</label>
-            <textarea id="message" rows="12" name="message" v-model="message"></textarea>
+            <textarea id="message" rows="12" name="message" v-model="message" required></textarea>
           </div>
           <div class="contact_item" v-show="false">
             <label for="message">スパムでない場合は空欄</label>

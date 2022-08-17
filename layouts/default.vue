@@ -47,6 +47,10 @@ export default Vue.extend({
   mounted () {
     if (this.$device.isDesktop) {
       this.menuActive = "open";
+      this.isCollapse = false;
+    } else {
+      this.menuActive = "close";
+      this.isCollapse = true
     }
   },
   methods: {

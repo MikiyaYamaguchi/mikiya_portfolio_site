@@ -2,7 +2,7 @@
   <el-menu
     default-active="0"
     class="side-navi-bar"
-    background-color="#fff"
+    background-color="transparent"
     active-text-color="#339BF8"
   >
     <el-menu-item index="1" @click="changePage(Path.PROFILE)">
@@ -41,9 +41,12 @@ export default Vue.extend({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 aside ul {
   height: 100%;
+  @media screen and (max-width: 767px) {
+    background: #fff !important;
+  }
 }
 .el-menu {
   border-right: none;

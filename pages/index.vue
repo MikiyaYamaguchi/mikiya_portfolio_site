@@ -38,18 +38,40 @@ export default Vue.extend({
   right: 0;
   bottom: 0;
   margin: auto;
-  height: 200vh;
+  width: 200vh;
+  height: 300vh;
   background: rgb(255, 255, 255);
   background: linear-gradient(
-    135deg,
+    90deg,
     rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 1) 40%,
-    rgba(51, 155, 248, 1) 70%,
+    rgba(255, 255, 255, 1) 30%,
+    rgba(51, 155, 248, 1) 60%,
     rgba(71, 110, 201, 1) 100%,
     rgba(0, 212, 255, 1) 100%
   );
+  transform: rotate(45deg);
   z-index: -1;
   animation: bgFadeIn 2s;
+  @media screen and (max-width: 1250px) and (min-width: 768px) {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 20%,
+      rgba(51, 155, 248, 1) 50%,
+      rgba(71, 110, 201, 1) 100%,
+      rgba(0, 212, 255, 1) 100%
+    );
+  }
+  @media screen and (max-width: 767px) {
+    background: linear-gradient(
+      90deg,
+      white 0%,
+      white 15%,
+      #339bf8 45%,
+      #476ec9 80%,
+      #00d4ff 100%
+    );
+  }
 }
 .container {
   height: 100%;
@@ -93,10 +115,10 @@ export default Vue.extend({
 }
 @keyframes bgFadeIn {
   0% {
-    transform: translate(100vh, 100vh);
+    transform: translateX(100vh) rotate(45deg);
   }
   100% {
-    transform: translate(0, 0);
+    transform: translateX(0) rotate(45deg);
   }
 }
 @media screen and (max-width: 767px) {

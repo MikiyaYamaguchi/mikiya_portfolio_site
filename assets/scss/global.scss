@@ -45,7 +45,10 @@ figure {
 }
 
 header {
-  background: #fff;
+  background: transparent;
+  @media screen and (max-width: 767px) {
+    background: #fff;
+  }
 }
 
 a {

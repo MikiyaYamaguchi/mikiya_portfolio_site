@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home">
     <el-container :class="device">
       <el-header height="80px">
         <Header />
@@ -66,11 +66,12 @@ export default Vue.extend({
 });
 </script>
 
-<style>
+<style lang="scss" scoped>
 header {
   position: fixed;
   z-index: 100;
   width: 100%;
+  background: transparent !important;
 }
 aside {
   position: fixed;

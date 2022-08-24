@@ -8,8 +8,21 @@
   </div>
 </template>
 
-<script lang="ts">
-export default {};
+<script>
+import Vue from "vue";
+import { Path } from "~/constants";
+export default Vue.extend({
+  data () {
+    return {
+      Path: Path
+    };
+  },
+  methods: {
+    changePage: function (path) {
+      this.$router.push({ path });
+    }
+  },
+});
 </script>
 
 <style lang="scss" scoped>

@@ -19,6 +19,7 @@
 import Vue from "vue";
 import "@/assets/scss/global.scss";
 export default Vue.extend({
+  layout: "home_layout",
   data() {
     return {
       isActive: false
@@ -31,6 +32,9 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+header {
+  background: transparent;
+}
 .top-bg-design {
   position: fixed;
   top: 0;
@@ -38,8 +42,8 @@ export default Vue.extend({
   right: 0;
   bottom: 0;
   margin: auto;
-  width: 200vh;
-  height: 300vh;
+  width: 250vh;
+  height: 330vh;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     90deg,

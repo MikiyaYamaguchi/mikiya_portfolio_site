@@ -63,7 +63,7 @@ export default Vue.extend({
         {
           id: 4,
           title: "買い物メモ",
-          image: require("../../assets/img/mikiyama-original1503.com_mikiya_yamaguchi_portfolio.jpg"),
+          image: require("../../assets/img/kaimonomemo.png"),
           link: "https://kaimonomemo.netlify.app",
           tec: "Nuxt.js",
           text: "Nuxt.jsで制作した買い物に役立つ便利アプリです。まだプロトタイプなので、未完成です。共有機能などをつける予定です。"

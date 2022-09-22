@@ -17,9 +17,9 @@
           <figure>
             <a :href="work.link" target="_blank">
               <img :src="work.image" :alt="work.title" />
-              <p class="title">{{work.title}}</p>
-              <p class="tec">{{work.tec}}</p>
-              <p class="text">{{work.text}}</p>
+              <p class="title">{{ work.title }}</p>
+              <p class="tec">{{ work.tec }}</p>
+              <p class="text">{{ work.text }}</p>
               <p class="more">more</p>
             </a>
           </figure>
@@ -59,6 +59,14 @@ export default Vue.extend({
           link: "https://mikiyama-original1503.com/mikiya_yamaguchi_portfolio/top.html",
           tec: "HTML/CSS/JavaScript/PHP",
           text: "人生で初めて作ったポートフォリオサイトです。エンジニアとしてまだまだ駆け出しだった2019年に制作しました。荒削りなサイトですが、思い出のサイトです。"
+        },
+        {
+          id: 4,
+          title: "買い物メモ",
+          image: require("../../assets/img/mikiyama-original1503.com_mikiya_yamaguchi_portfolio.jpg"),
+          link: "https://kaimonomemo.netlify.app",
+          tec: "Nuxt.js",
+          text: "Nuxt.jsで制作した買い物に役立つ便利アプリです。まだプロトタイプなので、未完成です。共有機能などをつける予定です。"
         }
       ]
     }
